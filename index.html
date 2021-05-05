@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated Slider UI Design</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    </head>
+    <body onload="slider()">
+        <div class="banner">
+            <div class="slider">
+                <img src="Images/pexels-julian-paolo-dayag-3621667.jpg" id="slideImg">
+            </div>
+
+            <div class="overlay">
+                <div class="navbar">
+                    <div class="logo">
+                        <h1 class="logo-text">Harley Davidson Namibia</h1>
+                    </div>
+                    <div class="menu-icons">
+                        <img src="Images/outline_perm_identity_white_24dp.png">
+                        <img src="Images/outline_shopping_cart_white_24dp.png">
+                        <img src="Images/outline_menu_white_24dp.png">
+                    </div>
+                </div>
+                <div class="content">
+                    <h1>LIVE YOUR DREAMS WITH HARLEY DAVIDSON</h1>
+                    <h3>We are the leading Harley Davidson dealership in Namibia offering the best deals. Give us a call or visit our nearest dealership today.</h3>
+
+                    <div>
+                        <button type="button" class="btn-1">ABOUT US</button>
+                        <button type="button">MOTORCYCLES</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var slideImg = document.getElementById("slideImg");
+            var images = new Array(
+                "Images/pexels-javier-aguilera-2611654.jpg",
+                "Images/pexels-javier-aguilera-2611688.jpg",
+                "Images/pexels-julian-paolo-dayag-3621667.jpg",
+                "Images/pexels-sourav-mishra-2516841.jpg"
+            );
+            var len = images.length;
+            var i = 0;
+            function slider(){
+                if(i > len-1){
+                    i = 0;
+                }
+                slideImg.src = images[i];
+                i++;
+                setTimeout('slider()',3000);
+            }
+        </script>
+    </body>
+    <footer>
+        <div class="footer">
+            <p>This website was built on the 15th of April 2021 by Shakeel Hoosain</p>
+        </div>
+    </footer>
+</html>
